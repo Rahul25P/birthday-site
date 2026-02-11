@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Letters 💌</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Open Your Letters 💖</h1>
+    <p>Tap each envelope to read your message ❤️</p>
+
+    <div class="letters">
+
+        <!-- Letter 1 -->
+        <div class="envelope" onclick="openLetter(this)">
+            💌
+            <p class="text">
+                You are my safest place. With you, I feel understood, loved, and at peace. Thank you for being you ❤️
+            </p>
+        </div>
+
+        <!-- Letter 2 -->
+        <div class="envelope" onclick="openLetter(this)">
+            💌
+            <p class="text">
+                It’s crazy how we met just recently, yet it feels like I’ve known you forever. The connection I feel with you is something I never expected, but I’m so grateful for it 💫
+            </p>
+        </div>
+
+        <!-- Letter 3 -->
+        <div class="envelope" onclick="openLetter(this)">
+            💌
+            <p class="text">
+                Even though we are a little distant right now, I promise I’ll try my hardest to make us work. No matter what, you are worth every effort I make ❤️
+            </p>
+        </div>
+
+        <!-- Letter 4 -->
+        <div class="envelope" onclick="openLetter(this)">
+            💌
+            <p class="text">
+                Never doubt yourself, baby. Out of everyone in this world, you are the one I would always choose. Today, tomorrow, and always 💍
+            </p>
+        </div>
+
+    </div>
+
+
+    <script>
+        let opened = 0;
+        let totalLetters = 4;
+
+        function openLetter(box) {
+
+            // Stop if already opened
+            if (box.classList.contains("open")) {
+                return;
+            }
+
+            box.classList.add("open");
+            opened++;
+
+            // After all letters are opened
+            if (opened === totalLetters) {
+
+                setTimeout(function() {
+
+                    alert("One last message for you ❤️");
+                    window.location.href = "final.html";
+
+                }, 1800);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

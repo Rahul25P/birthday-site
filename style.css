@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4b6e;
+    cursor: pointer;
+}
+
+#cake {
+    width: 70%;
+    max-width: 250px;
+    margin: 20px 0;
+}
+
+.letters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.envelope {
+    background: white;
+    color: #ff4b6e;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.text {
+    display: none;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.envelope.open {
+    background: #ff4b6e;
+    color: white;
+}
+
+.envelope.open .text {
+    display: block;
+}

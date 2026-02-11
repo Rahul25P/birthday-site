@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blow Candles 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center">
+
+    <h1>Blow the Candles 😘🎂</h1>
+
+    <p>Tap the cake 5 times 💨</p>
+
+    <img src="images/cake.png" id="cake">
+
+    <p id="count">Blows: 0 / 5</p>
+
+    <script>
+        let blows = 0;
+
+        let cake = document.getElementById("cake");
+        let count = document.getElementById("count");
+
+        cake.addEventListener("click", function() {
+
+            blows++;
+            count.innerText = "Blows: " + blows + " / 5";
+
+            if (blows >= 5) {
+                setTimeout(() => {
+                    window.location.href = "letters.html";
+                }, 1000);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
